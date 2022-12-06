@@ -22,8 +22,13 @@
     "webpack-dev-server": "^3.11.2"
   },
   "dependencies": {
-    "react": "^16.11.0",
-    "react-dom": "^16.11.0",
-    "whatwg-fetch": "^3.6.2"
+    "react": "^17.0.0",
+    "react-dom": "^17.0.0",
+    "whatwg-fetch": "^3.6.2",
+    "@mui/icons-material": "^5.10.6",
+    "@mui/material": "^5.10.7",
+    "@mui/styled-engine-sc": "^5.10.6",
+    "@emotion/react": "^11.10.4",
+    "@emotion/styled": "^11.10.4"
   }
 }
