@@ -1,7 +1,6 @@
 
 import React from 'react';
 
-
 const Heading = ({ changeValue, search_value, select_value, handleSubmit }) => {
     return (
         <section className='box_heading'>
