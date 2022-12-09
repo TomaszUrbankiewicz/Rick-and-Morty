@@ -18,6 +18,11 @@ function App() {
     listDownload()
   },[]);
   useEffect(() => {
+    setTimeout(() => {
+      setError('');
+    }, "1500")
+  },[error]);
+  useEffect(() => {
     if(activ){
       handleFiltration();
     }
@@ -61,7 +66,7 @@ function App() {
       setPage(1)
       setError(`The number of characters found: ${res.info.count}`);
       setQuantity_page(res.info.pages);
-      console.log(res)
+      setApi_answer(res)
     }
     })
     .catch(error => {
@@ -99,6 +104,9 @@ function App() {
                 changeValue={changeValue}
                 handleSubmit={handleSubmit}
               />
+              <div className='box_error'>
+                <span className='error'>{error}</span>
+              </div>
               {(api_answer != null) && <Table api_answer={api_answer} />}
               <div className='pagination'>
                 <Pagination page={page} handleChangePage={handleChangePage} quantity_page={quantity_page}/>
