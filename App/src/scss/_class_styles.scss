@@ -6,7 +6,7 @@
     &__wrapper{
         width: 90%;
         max-width: 1600px;
-        height: 500px;
+        padding-bottom: 20px;
         .pagination{
             width: 100%;
             display: flex;
@@ -67,6 +67,10 @@
                 border-radius: 5px;
                 padding: 0px 5px;
                 width: 260px;
+                font-family: 'Oswald';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 14px;
             }
         }
 
@@ -76,9 +80,14 @@
 
 .table{
     width: 100%;
+    margin-bottom: 20px;
     background: white;
     -webkit-box-shadow: 0px 0px 5px 0px rgba(203,212,226,0.73); 
     box-shadow: 0px 0px 5px 0px rgba(203,212,226,0.73);
+    .divider{
+        border-bottom: solid 1px #CBD4E2;
+        width: 100%;
+    }
     .table_column{
         display: flex;
         align-items: center;
@@ -86,10 +95,11 @@
         .box{
             display: flex;
             justify-content: flex-start;
+            margin-right: 10px;
             align-items: center;
             width: 19.6%;
-            height: 34px;
-            border-bottom: solid 1px #CBD4E2;
+            min-width: 50px;
+            height: 50px;
             span{
                 font-family: 'Oswald';
                 font-weight: 500;
@@ -99,13 +109,87 @@
         .box_chec{
             width: 40px;
             min-width: 40px;
+            margin-right: 0px;
             .cheker{
-                // width: 10px;
-                // height: 10px;
                 position: relative;
             }
         }
     }
+    .characters{
+        .box{
+            min-width: 50px;
+            margin: 15px 10px 15px 0px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            span{
+                display: -webkit-box;
+                -webkit-line-clamp: 6;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+                font-family: 'Oswald';
+                font-weight: 300;
+                font-size: 15px;
+                color:#1A2328;
+                img{
+                    width: 15px;
+                    height: 15px;
+                    margin-bottom: 2px;
+                    margin-right: 3px;
+                    
+                }
+                .test {fill:red;}
+            }
+            .name{
+                font-weight: 500;
+                padding-bottom: 5px;
+            }
+            .species{
+                color: #484F53;
+            }
+        }
+        .box_avatar{
+            position: relative;
+            width: 50px;
+            height: 50px;
+            border: 5px dashed #E5EAF0; 
+            border-radius: 15px;  
+            .avatar{
+                position: absolute;
+                top: -3px;
+                left: -3px;
+                z-index: 2;
+                width: 115%;
+                height: 115%;
+                border-radius: 15px;   
+                background: none;
+                background-repeat: no-repeat;
+                background-size: contain;
+                background-position: center;
+                -webkit-box-shadow: 0px 0px 5px 0px rgba(203,212,226,0.73); 
+            box-shadow: 0px 0px 5px 0px rgba(203,212,226,0.73);
+            }
+        }
+        .box_chec{
+            width: 40px;
+            min-width: 40px;
+            margin-right: 0px;
+            .cheker{
+                position: relative;
+            }
+        }
+        
+    }
+    .dead{
+        background-color: #F6F8FA;
+    }
+    .unknown{
+        opacity: 0.2;
+    }
+    
 }
 
 .box_check{

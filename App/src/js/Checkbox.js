@@ -1,11 +1,14 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 
-const Checkbox = ({ api_answer }) => {
+const Checkbox = ({ name, event }) => {
+    const Clickcheckbox = (e) => {
+        if(event) event(e)
+    }
 
     return (
         <div className='box_check'>
             <label className="container">
-                <input type="checkbox" />
+                <input name={(name) && name} type="checkbox" onClick={Clickcheckbox} />
                 <span className="custom-check"></span>
             </label>
             
